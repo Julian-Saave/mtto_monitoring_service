@@ -1,0 +1,28 @@
+{
+  "name": "monitoreo",
+  "version": "1.0.0",
+  "description": "servicio para el monitoreo de variables de plc's",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "plc",
+    "modbus",
+    "registros",
+    "comunicacion"
+  ],
+  "author": "Julian Andres Saavedra Osorio",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "modbus-serial": "^8.0.21-no-serial-port",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7"
+  }
+}
