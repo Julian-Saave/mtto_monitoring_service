@@ -1,26 +1,27 @@
 # mtto_monitoring_service
 Application use to monitoring variables of PLC´s brand DELTA
+
 --- 
 
-## enviroment configuration
+## Enviroment configuration
 ### POSTGRESQL
-#### install
+#### Install
 ```bash
 sudo apt install postgresql postgresql-client -y
 ```
-#### create password postgresql
+#### Create password postgresql
 ```bash
 sudo -i -u postgres
 psql
 ALTER USER postgres PASSWORD 'new_password';
 ```
-#### create database
+#### Create database
 ```bash
 sudo -i -u postgres
 psql
 CREATE DATABASE new_database;
 ```
-#### open service to the red
+#### Open service to the red
 ```bash
 sudo nano /etc/postgresql/<versión>/main/postgresql.conf
 #chance 
@@ -33,20 +34,20 @@ host    all             all             192.168.1.0/24         md5
 sudo systemctl restart postgresql
 ```
 ### NODE
-#### install   
+#### Install   
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 nvm install 22
 ```
 ### GIT
-#### install
+#### Install
 ```bash
 apt-get install git
 ```
 ---
 
-## instalation
+## Instalation
 
 ```bash
 git clone https://github.com/Julian-Saave/mtto_monitoring_service.git
@@ -55,7 +56,7 @@ npm install
 ```
 ---
 
-## use
+## Use
 
 ```bash
 npm run dev #development execution
@@ -63,7 +64,7 @@ npm run start #production execution
 ```
 ---
 
-## enviroment variables
+## Enviroment variables
 
 | Variable      | Description       |
 | ------------- | ----------------- |
@@ -75,5 +76,5 @@ npm run start #production execution
 | `DB_PORT`     | Database port     |
 ---
 
-## features
+## Features
 technologies used: node.js, express, postgresql, modbus rtu
