@@ -1,8 +1,8 @@
 # mtto_monitoring_service
 Application use to monitoring variables of PLC´s brand DELTA
 --- 
-## enviroment configuration
 
+## enviroment configuration
 ### POSTGRESQL
 #### install
 ```bash
@@ -44,6 +44,7 @@ nvm install 22
 ```bash
 apt-get install git
 ```
+---
 
 ## instalation
 
