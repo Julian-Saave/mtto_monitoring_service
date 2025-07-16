@@ -9,5 +9,6 @@ module.exports = {
     port: process.env.DB_PORT,
     database: process.env.DB_DATABASE
   },
-  JWT_SECRET: process.env.JWT_SECRET
+  JWT_SECRET: process.env.JWT_SECRET,
+  plc_ip: process.env.PLC_IP
   };
