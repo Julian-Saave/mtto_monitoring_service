@@ -1,36 +1,6 @@
 # mtto_monitoring_service
 Application use to monitoring variables of PLC´s brand DELTA
 --- 
-
-## intalation
-
-```bash
-git clone https://github.com/Julian-Saave/mtto_monitoring_service.git
-cd mtto_monitoring_service
-npm install
-```
----
-
-## use
-
-```bash
-npm run dev #development execution
-npm run start #production execution
-```
----
-
-## enviroment variables
-
-| Variable      | Description       |
-| ------------- | ----------------- |
-| `PORT`        | Execution port    |
-| `DB_USER`     | Database user     |
-| `DB_PASS`     | Database password |
-| `DB_HOST`     | Database address  |
-| `DB_DATABASE` | Database name     |
-| `DB_PORT`     | Database port     |
----
-
 ## enviroment configuration
 
 ### POSTGRESQL
@@ -69,5 +39,40 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 \. "$HOME/.nvm/nvm.sh"
 nvm install 22
 ```
+### GIT
+#### install
+```bash
+apt-get install git
+```
+
+## instalation
+
+```bash
+git clone https://github.com/Julian-Saave/mtto_monitoring_service.git
+cd mtto_monitoring_service
+npm install
+```
+---
+
+## use
+
+```bash
+npm run dev #development execution
+npm run start #production execution
+```
+---
+
+## enviroment variables
+
+| Variable      | Description       |
+| ------------- | ----------------- |
+| `PORT`        | Execution port    |
+| `DB_USER`     | Database user     |
+| `DB_PASS`     | Database password |
+| `DB_HOST`     | Database address  |
+| `DB_DATABASE` | Database name     |
+| `DB_PORT`     | Database port     |
+---
+
 ## features
 technologies used: node.js, express, postgresql, modbus rtu
