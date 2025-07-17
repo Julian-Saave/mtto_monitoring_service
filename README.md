@@ -83,6 +83,7 @@ npm run start #production execution
 | `DB_DATABASE` | Database name     |
 | `DB_PORT`     | Database port     |
 | `PLC_IP`      | Ip plc            |
+
 ---
 
 ## Features
