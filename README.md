@@ -50,9 +50,17 @@ apt-get install git
 ## Instalation
 
 ```bash
-git clone https://github.com/Julian-Saave/mtto_monitoring_service.git
+git clone https://github.com/Julian-Saave/mtto_monitoring_service.git #Copy repository
 cd mtto_monitoring_service
-npm install
+npm install #Install dependencies
+npm install -g pm2 #Install services manager
+pm2 start app.js --name mtto_monitoring_service #add service
+pm2 save #Save changes
+pm2 startup #Generate command
+#Copy and paste generate comand
+#Example:
+#sudo env PATH=$PATH:/home/est04/.nvm/versions/node/v22.17.0/bin /home/est04/.nvm/versions/node/v22.17.0/lib/node_modules/pm2/bin/pm2 startup systemd -u est04 --hp /home/est04
+
 ```
 ---
 
