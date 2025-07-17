@@ -53,6 +53,9 @@ apt-get install git
 git clone https://github.com/Julian-Saave/mtto_monitoring_service.git #Copy repository
 cd mtto_monitoring_service
 npm install #Install dependencies
+
+#configure enviroment variables
+
 npm install -g pm2 #Install services manager
 pm2 start app.js --name mtto_monitoring_service #add service
 pm2 save #Save changes
