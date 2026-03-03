@@ -3,9 +3,10 @@ const { plc_ip } = require('./config')
 const client = new ModbusRTU();
 
 const connect = async () => {
+
     try{
         client.setTimeout(5000)
-        await client.connectTCP("plc_ip", { port: 502 });
+        await client.connectTCP(plc_ip, { port: 502 });
         client.setID(1);
         console.log("Conectado")
         return(true)
