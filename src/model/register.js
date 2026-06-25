@@ -21,9 +21,9 @@ const Register = db.define('register', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-    length: {
+    decilmal_places: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     id_group: {
         type: DataTypes.INTEGER,

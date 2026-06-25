@@ -74,7 +74,7 @@ const getRegister = async (req, res)=>{
 
 const postRegister = async (req, res)=>{
     try{
-        const { type, number, name, length, id_group } = req.body;
+        const { type, number, name, decilmal_places, id_group } = req.body;
         console.log(id_group)
 
         const ifGroup = await Group.findByPk(id_group);
@@ -102,7 +102,7 @@ const postRegister = async (req, res)=>{
             number: number,
             name: capitalize(name),
             address: address.address+Number(number),
-            length: length,
+            decilmal_places: decilmal_places,
             id_group: id_group
         })
         register.save();
