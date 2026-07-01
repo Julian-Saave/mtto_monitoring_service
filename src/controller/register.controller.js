@@ -68,7 +68,7 @@ const getRegister = async (req, res)=>{
 
     }catch(error){
         console.log(error);
-        res.status(500).json({success: false, message: 'Error interno'})    
+        res.status(500).json({success: false, message: 'Error interno', detail: error})    
     }
 }
 
