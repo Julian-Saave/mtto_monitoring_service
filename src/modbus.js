@@ -31,10 +31,11 @@ const monitoring = async (array) => {
         if(connected){
             if(type==="BIT"){
                 value = await client.readCoils(register.address, 1);
+                value = value.data[0]
             }else{
                 value = await client.readHoldingRegisters(register.address, 1);
+                value = value.data[0]/(10**register.decilmal_places)
             }
-            value = value.data[0]
         }
         const memorie = {...register.dataValues}
         memorie.value = value
