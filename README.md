@@ -17,21 +17,9 @@ ALTER USER postgres PASSWORD 'new_password';
 ```
 #### Create database
 ```bash
-sudo -i -u postgres
-psql
 CREATE DATABASE new_database;
-```
-#### Open service to the red
-```bash
-sudo nano /etc/postgresql/<versión>/main/postgresql.conf
-#chance 
-#"listen_addresses = 'localhost'" 
-#to 
-listen_addresses = '*'
-sudo nano /etc/postgresql/<versión>/main/pg_hba.conf
-# Add this line at the end:
-host    all             all             192.168.1.0/24         md5
-sudo systemctl restart postgresql
+EXIT;
+EXIT;
 ```
 ### NODE
 #### Install   
@@ -48,14 +36,19 @@ apt-get install git
 ---
 
 ## Instalation
-
+### Clone repository
 ```bash
 git clone https://github.com/Julian-Saave/mtto_monitoring_service.git #Copy repository
 cd mtto_monitoring_service
 npm install #Install dependencies
-
-#configure enviroment variables
-
+```
+### Configure enviroment variables
+```bash
+sudo nano .env.example
+# Modify values of variables and save as .env
+```
+### Create services auto run
+```bash
 npm install -g pm2 #Install services manager
 pm2 start app.js --name mtto_monitoring_service #add service
 pm2 save #Save changes
